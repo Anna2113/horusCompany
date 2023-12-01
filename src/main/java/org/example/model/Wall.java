@@ -1,7 +1,6 @@
 package org.example.model;
 
 import org.example.Block;
-import org.example.CompositeBlock;
 import org.example.Structure;
 
 import java.util.ArrayList;
