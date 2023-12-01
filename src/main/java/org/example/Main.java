@@ -24,8 +24,12 @@ public class Main {
 
         Optional<Block> optionalBlock;
         optionalBlock = wall.findBlockByColor("silver");
-        System.out.println("The block found is: " + optionalBlock.get().getColor()
-                + " and built of " + optionalBlock.get().getMaterial() + ".");
+        if(optionalBlock.isPresent()) {
+            System.out.println("The block found is: " + optionalBlock.get().getColor()
+                    + " and built of " + optionalBlock.get().getMaterial() + ".");
+        }else{
+            throw new RuntimeException("Item name is missing!");
+        }
 
         System.out.println("----------------------------");
 
