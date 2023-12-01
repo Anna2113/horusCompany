@@ -1,13 +1,13 @@
 package org.example;
 
+import org.example.model.SingleBlock;
+import org.example.model.Wall;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class WallTest {
     List<Block> blockList = new ArrayList<>(Arrays.asList(
@@ -25,14 +25,14 @@ class WallTest {
 
     @Test
     void shouldSayThatBlockIsRed() {
-        Wall element = new Wall("red", "brick");
-        Assertions.assertEquals("red", element.getColor());
+        SingleBlock singleBlock = new SingleBlock("red", "brick");
+        Assertions.assertEquals("red", singleBlock.getColor());
     }
 
     @Test
     void shouldSayThatBlockIsStone() {
-        Wall element = new Wall("grey", "stone");
-        Assertions.assertEquals("stone", element.getMaterial());
+        SingleBlock singleBlock = new SingleBlock("grey", "stone");
+        Assertions.assertEquals("stone", singleBlock.getMaterial());
     }
 
     @Test

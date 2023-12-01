@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.model.SingleBlock;
+import org.example.model.Wall;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -46,8 +49,12 @@ public class Main {
 
         System.out.println("----------------------------");
 
+
+        SingleBlock singleBlock = new SingleBlock();
+        singleBlock.setBlocks(blockList);
+
         System.out.println("blockList elements:");
-        for (Block block : wall.getBlocks()) {
+        for (Block block : singleBlock.getBlocks()) {
             System.out.println(block);
         }
     }

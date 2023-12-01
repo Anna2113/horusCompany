@@ -1,16 +1,16 @@
-package org.example;
+package org.example.model;
+
+import org.example.Block;
+import org.example.CompositeBlock;
+import org.example.Structure;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class Wall implements Structure, CompositeBlock {
+public class Wall extends SingleBlock implements Structure, CompositeBlock {
 
     private List<Block> blocks;
-
-    public String color;
-
-    public String material;
 
     public Wall() {}
 
@@ -50,25 +50,5 @@ public class Wall implements Structure, CompositeBlock {
     @Override
     public int count() {
         return blocks.size();
-    }
-
-    @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public String getMaterial() {
-        return material;
-    }
-
-    @Override
-    public List<Block> getBlocks() {
-        return blocks;
-    }
-
-    @Override
-    public String toString() {
-        return "Block: " + "{color: " + color + ", material: " + material + "}.";
     }
 }
