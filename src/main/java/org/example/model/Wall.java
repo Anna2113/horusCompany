@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class Wall extends SingleBlock implements Structure, CompositeBlock {
+public class Wall extends SingleBlock implements Structure{
 
     private List<Block> blocks;
 
